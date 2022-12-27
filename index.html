@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="printjob.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="printfile.js" defer></script>
+    <title>Print Center</title>
+</head>
+
+<body>
+    <div class="card m-3">
+        <div class="card-header">
+            <h2>Print Center Options</h2>
+        </div>
+        <div class="card-body">
+            <form>
+                <ul id="print-job">
+                    In order for the Print Center to best serve you, please fill in the information below.
+                    <h5>Deliver to:</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="deliver" id="meetingOwner" value="owner">
+                        <label class="form-check-label" for="meetingOwner">
+                            Meeting Owner - Delivery will occur one business day prior to the meeting
+                            time.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="deliver" id="meetingRoom" value="room">
+                        <label class="form-check-label" for="meetingRoom">
+                            Meeting Room - Delivery will occur 15 minutes prior to the meeting
+                            time.
+                        </label>
+                    </div>
+                    <div class="my-3">
+
+                        <textarea class="form-control" id="specialInstruction" rows="3"
+                            placeholder="If you have any specific instructions pertinent to your entire order, please enter them here."></textarea>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">File</th>
+                                <th scope="col">Print</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <tr>
+                                <th scope="row">agenda.pdf</th>
+                                <td><input type="checkbox" /></td>
+                                <td><input type="checkbox" /></td>
+                                <td><textarea class="form-control" id="notes" rows="1" placeholder="Notes"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-between">
+                        <h6>*File is not compatible with Print Center</h6>
+                        <div>
+                            <button type="submit" value="Submit" class="btn btn-success" id="submit"> Submit </button>
+                            <button type="cancel" value="Cancel" class="btn btn-outline-secondary"> Cancel </button>
+                        </div>
+                    </div>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
